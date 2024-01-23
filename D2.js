@@ -37,9 +37,20 @@ if (num4 % 5 === 0) {
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-// Esempio di utilizzo
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+const num5 = 3;
+const num6 = 7;
+if (num5 === 8) {
+  console.log("num5 è 8");
+} else if (num6 === 8) {
+  console.log("num6 è 8");
+} else if (num5 + num6 === 8) {
+  console.log("la somma di num5 e num6 è 8");
+} else if (num5 - num6 === 8 || num6 - num5 === 8) {
+  console.log("la sottrazione tra i due valori è 8");
+} else {
+  console.log("nessuna condizione si è verificata");
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -48,6 +59,14 @@ if (num4 % 5 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const totalShoppingCart = 47;
+const promo = 50;
+const ship = 10;
+if (totalShoppingCart > promo) {
+  console.log("checkout con spedizione gratuita =", totalShoppingCart);
+} else {
+  console.log("checkout con spedizione a pagamento =", totalShoppingCart + ship);
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -55,6 +74,16 @@ if (num4 % 5 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const totalShoppingCart2 = 47;
+const promo2 = 50;
+const ship2 = 10;
+const blackFriday = (totalShoppingCart2 / 100) * 20;
+
+if (totalShoppingCart2 - blackFriday > promo) {
+  console.log("checkout con spedizione gratuita =", blackFriday);
+} else {
+  console.log("checkout con spedizione a pagamento =", totalShoppingCart2 - blackFriday + ship);
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -63,10 +92,19 @@ if (num4 % 5 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const n1 = 20;
+const n2 = 10;
+const n3 = 30;
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
+const verNumero = 10;
+if (typeof verNumero === "number") {
+  console.log("la costante è un numero");
+} else {
+  console.log("la costante non è un numero");
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -140,5 +178,5 @@ console.log(numeri);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-numeri.splice(9, 1, 100);
+numeri[9] = 100;
 console.log(numeri);
